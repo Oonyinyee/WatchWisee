@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Contact Us - Watch Wise">
+    <meta name="description" content="Get in touch with the Watch Wise team for inquiries, feedback, or support.">
+    <meta name="keywords" content="contact, Watch Wise, support, feedback">
+    <title>Contact Us - Watch Wise</title>
+    <link rel="stylesheet" href="style.css"> 
+
+
+    <style>
+        body {
+            font-family: Arial, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #333;
+        }
+
+        header {
+            background-color: #24292e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1, {font-size: 3em; margin: 0;}
+
+        header h2 {font-size: 1em;}
+
+
+        .contact-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.8rem;
+            background-color: #0078D7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #000000;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #0078D7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Contact Us</h1>
+        <h2>We’d Love to Hear From You</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html                     ">Home</a></li>
+            <li><a href="DeadpoolandWolverine.html      ">Comedy</a></li>
+            <li><a href="Shogun.html                    ">Drama</a></li>
+            <li><a href="Signin.html                   	">Sign In</a></li>
+            <li><a href="Contact.html                   ">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p>If you have any questions, feedback, or need support, please contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:contactus@watchwise.com">contactus@watchwise.com</a></p>
+            <p>We aim to respond within 24-48 hours.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xnnqkgkj" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Watch Wise. All rights reserved.</p>
+    </footer>
+</body>
+</html>

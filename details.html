@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie/Show Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <header>
+    <h1>Movie/Show Details</h1>
+  </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html                     ">Home</a></li>
+            <li><a href="DeadpoolandWolverine.html      ">Comedy</a></li>
+            <li><a href="Shogun.html                    ">Drama</a></li>
+            <li><a href="Signin.html                   	">Sign In</a></li>
+	    <li><a href="Contact.html                   ">Contact Us</a></li>
+        </ul>
+    </nav>
+
+   <div>
+       <form id="searchForm" action="results.html" method="get">
+        <input type="text" name="query" id="searchInput" placeholder="Search for TV shows or movies" required>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+
+  <main id="movie-details">
+    <div id="details-container">
+      <!-- Movie Details -->
+      <div id="poster-section"></div>
+      <div id="trailer-section"></div>
+
+
+     <section id="bottom-content">
+      <!-- Recommendation Section -->
+      <div id="recommendation-section">
+        <h3>Recommended Titles</h3>
+        <div id="recommendation-slider" class="recommendations-container">
+          <!-- Recommendations added dynamically -->
+        </div>
+      </div>
+
+      <!-- Rating Section -->
+      <div id="rating-section">
+        <h4>Your Rating:</h4>
+        <div id="stars">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <p id="selected-rating">Rating: 0</p>
+      </div>
+
+
+      <!-- Reviews Section -->
+      <div id="reviews-section">
+        <h3>User Reviews</h3>
+        <div id="reviews-container"></div>
+        <form id="review-form">
+          <textarea id="review-input" placeholder="Write your review here..." required></textarea>
+          <button type="submit">Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+   <!-- JavaScript -->
+    <script>
+        // Star Rating Setup
+        function setupStarRating() {
+            const stars = document.querySelectorAll('.star');
+            const selectedRating = document.getElementById('selected-rating');
+            let currentRating = 0;
+
+            stars.forEach((star) => {
+                const starValue = parseInt(star.dataset.value);
+
+                star.addEventListener('mouseover', () => {
+                    updateStarHighlight(starValue);
+                });
+
+                star.addEventListener('mouseout', () => {
+                    updateStarHighlight(currentRating);
+                });
+
+                star.addEventListener('click', () => {
+                    currentRating = starValue;
+                    updateStarHighlight(currentRating);
+                    selectedRating.textContent = `Rating: ${currentRating}`;
+                });
+            });
+
+            function updateStarHighlight(value) {
+                stars.forEach((star) => {
+                    const starValue = parseInt(star.dataset.value);
+                    star.classList.toggle('highlighted', starValue <= value);
+                });
+            }
+        }
+
+        // Call the function when the DOM is ready
+        document.addEventListener('DOMContentLoaded', setupStarRating);
+    </script>
+
+
+  <footer>
+    <p>Contact us: <a href="mailto:contactus@watchwise.com">contactus@watchwise.com</a></p>
+    <p>&copy; 2024 Movie & TV Show Reviews</p>
+  </footer>
+
+  <script src="details.js" defer></script>
+</body>
+
+</html>
